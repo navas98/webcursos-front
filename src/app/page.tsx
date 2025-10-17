@@ -1,12 +1,15 @@
-import ProjectList from "./components/ProjectList";
+import Hero from "./components/Hero";
+import FeatureGrid from "./components/FeatureGrid";
+import AboutSection from "./components/AboutSection";
+import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="bg-gray-50 min-h-screen py-10">
-      <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">
-        Project Dashboard
-      </h1>
-      <ProjectList />
+    <main className="bg-gradient-to-b from-[#0c0020] via-[#120033] to-[#000000] text-white min-h-screen">
+      <Hero />
+      <FeatureGrid></FeatureGrid>
+      <AboutSection />
+      <Footer />
     </main>
   );
 }

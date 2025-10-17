@@ -1,12 +1,9 @@
 "use client";
 
 import { Video } from "../types/Video";
+import CommitList from "./CommitList";
 
-interface Props {
-  video: Video;
-}
-
-export default function VideoCard({ video }: Props) {
+export default function VideoCard({ video }: { video: Video }) {
   return (
     <div className="border border-gray-300 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition">
       <h3 className="text-lg font-semibold text-gray-800">{video.title}</h3>
@@ -34,6 +31,9 @@ export default function VideoCard({ video }: Props) {
       >
         Watch on YouTube →
       </a>
+
+      {/* 🧩 Commits */}
+      <CommitList videoId={video._id} />
     </div>
   );
 }
